@@ -1,6 +1,6 @@
 # Carlos Garcia-de-la-Cadena — Portfolio
 
-Bilingual professional portfolio prepared for GitHub Pages.
+Bilingual professional portfolio prepared for GitHub Pages. Every site file is at the same directory level: there are no asset or download subfolders. The portfolio appears before research in the HTML reading order.
 
 The extended HS case study lives at `hs-market-sizing.html`. Only its evidence workbook is downloadable; the presentation and source code are intentionally excluded.
 
@@ -17,7 +17,7 @@ The bilingual MVP methodology `hospital-expenditure-benchmarking.html` links com
 ## Publish on GitHub Pages
 
 1. Create a public repository named `garcia-de-la-cadena.github.io`.
-2. Upload the files in this folder to the repository root.
+2. Unzip the archive and upload **all extracted files** directly to the repository root, alongside `index.html`—do not upload a containing folder or the ZIP itself.
 3. In **Settings → Pages**, select **Deploy from a branch**.
 4. Select the `main` branch and `/ (root)` folder.
 

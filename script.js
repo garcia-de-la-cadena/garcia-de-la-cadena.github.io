@@ -75,15 +75,6 @@ navigation.querySelectorAll("a").forEach(link => link.addEventListener("click", 
   menuButton.setAttribute("aria-expanded", "false");
 }));
 
-// Prioritize applied work in the recruiter-facing reading order.
-const aboutSection = document.getElementById("about");
-const portfolioSection = document.getElementById("pharma");
-const publicationsSection = document.getElementById("publications");
-if (aboutSection && portfolioSection && publicationsSection) {
-  aboutSection.after(portfolioSection);
-  portfolioSection.after(publicationsSection);
-}
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
