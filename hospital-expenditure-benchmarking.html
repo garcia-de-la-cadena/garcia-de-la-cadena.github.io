@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" data-title-en="Hospital Expenditure Benchmarking | Carlos Garcia-de-la-Cadena" data-title-es="Benchmark de Gasto Hospitalario | Carlos Garcia-de-la-Cadena">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An MVP methodology for hospital expenditure and case-mix benchmarking using therapeutic areas, treatment routes and partially penalized LASSO.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#275317">
+  <title>Hospital Expenditure Benchmarking | Carlos Garcia-de-la-Cadena</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="hospital-benchmark-case.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body class="case-study-page benchmark-page">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="index.html#top" aria-label="Carlos Garcia-de-la-Cadena — home"><span>CG</span><span class="wordmark-name">Carlos Garcia-de-la-Cadena</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only" data-i18n="menu">Open menu</span><span></span><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Case study navigation">
+      <a href="#question" data-i18n="hbNavQuestion">Question</a>
+      <a href="#data" data-i18n="hbNavData">Data</a>
+      <a href="#routes" data-i18n="hbNavRoutes">Routes</a>
+      <a href="#model" data-i18n="hbNavModel">Model</a>
+      <a href="#outputs" data-i18n="hbNavOutputs">Outputs</a>
+      <a href="index.html#pharma" data-i18n="caseNavPortfolio">Portfolio</a>
+    </nav>
+    <div class="language-switch" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-lang="es" aria-pressed="false">ES</button></div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero benchmark-hero" id="top">
+      <div class="case-hero-main reveal">
+        <a class="case-back" href="index.html#pharma" data-i18n="hbBack">← Back to strategy & market research portfolio</a>
+        <p class="hero-kicker" data-i18n="hbKicker">Hospital analytics case 08 · MVP methodology</p>
+        <h1 data-i18n="hbTitle">From hospital budgets to comparable resource-intensity signals.</h1>
+        <p class="case-deck" data-i18n="hbDeck">A transparent design that links exercised expenditure, observed patient episodes and treatment routes—without claiming unobserved patient-level accounting costs.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#model" data-i18n="hbSeeModel">See the estimator</a></div>
+      </div>
+      <aside class="case-hero-aside reveal" aria-label="Case study facts">
+        <div><span data-i18n="hbUnit">Unit of analysis</span><strong data-i18n="hbUnitValue">Hospital · Year</strong></div>
+        <div><span data-i18n="hbPopulation">Provider scope</span><strong data-i18n="hbPopulationValue">Autonomous tertiary hospitals</strong></div>
+        <div><span data-i18n="hbMethods">Methods</span><strong data-i18n="hbMethodsValue">Market Basket · Partial LASSO</strong></div>
+        <div><span data-i18n="hbUse">Decision use</span><strong data-i18n="hbUseValue">Benchmarking · Budget review</strong></div>
+      </aside>
+    </section>
+
+    <section class="case-snapshot reveal" aria-label="MVP design parameters">
+      <div><span data-i18n="hbAreas">Therapeutic areas</span><strong>15–20</strong></div>
+      <div><span data-i18n="hbRoutes">Routes per area</span><strong>3–6</strong></div>
+      <div><span data-i18n="hbPanel">Preferred panel</span><strong>3–5 <small data-i18n="hbYears">years</small></strong></div>
+      <div class="snapshot-accent"><span data-i18n="hbPrimaryOutput">Primary output</span><strong>O / E</strong></div>
+    </section>
+
+    <section class="case-section" id="question">
+      <div class="case-section-head reveal"><p class="case-index">01 / <span data-i18n="hbQuestionLabel">Decision question</span></p><h2 data-i18n="hbQuestionTitle">Which hospitals spend differently after accounting for what they do and whom they treat?</h2><p data-i18n="hbQuestionIntro">Public budgets reveal total exercised expenditure. Discharge records reveal activity and case mix. The MVP connects both sources to estimate comparable—not accounting—resource intensity.</p></div>
+      <div class="case-two-col">
+        <div class="case-lede reveal"><p data-i18n="hbQuestionLede">The objective is not to invent a price for every code. It is to explain expected expenditure and identify clinically interpretable deviations for further review.</p></div>
+        <div class="brief-list reveal">
+          <article><span>01</span><div><h3 data-i18n="hbObservedTitle">What is observed</h3><p data-i18n="hbObservedText">Exercised operating expenditure, patient episodes, diagnoses, procedures, hospital activity and capacity.</p></div></article>
+          <article><span>02</span><div><h3 data-i18n="hbEstimatedTitle">What is estimated</h3><p data-i18n="hbEstimatedText">Base therapeutic-area intensity, incremental treatment-route signals and expected hospital expenditure.</p></div></article>
+          <article><span>03</span><div><h3 data-i18n="hbNotClaimedTitle">What is not claimed</h3><p data-i18n="hbNotClaimedText">Exact patient-level costs, causal procedure effects, inefficiency or overpricing.</p></div></article>
+        </div>
+      </div>
+      <div class="case-callout reveal"><p class="eyebrow" data-i18n="hbPositioning">Positioning</p><p data-i18n="hbPositioningText">A screening and benchmarking tool: it identifies where a hospital merits closer operational or accounting review.</p></div>
+    </section>
+
+    <section class="case-section benchmark-data" id="data">
+      <div class="case-section-head reveal"><p class="case-index">02 / <span data-i18n="hbDataLabel">Data architecture</span></p><h2 data-i18n="hbDataTitle">Start with episodes; aggregate only after the clinical structure is preserved.</h2><p data-i18n="hbDataIntro">The episode-level table constructs diagnosis–procedure relationships. The hospital-year table connects those relationships with expenditure.</p></div>
+      <div class="benchmark-data-grid reveal">
+        <article><p class="eyebrow" data-i18n="hbEpisodeLevel">Episode level</p><h3 data-i18n="hbEpisodeTitle">One row per inpatient episode</h3><ul><li data-i18n="hbEpisode1">Principal diagnosis and therapeutic area</li><li data-i18n="hbEpisode2">Secondary diagnoses and comorbidity</li><li data-i18n="hbEpisode3">Procedures performed during the episode</li><li data-i18n="hbEpisode4">Length of stay, discharge status and hospital</li></ul></article>
+        <article><p class="eyebrow" data-i18n="hbHospitalYear">Hospital-year level</p><h3 data-i18n="hbHospitalYearTitle">One row per institution and year</h3><ul><li data-i18n="hbHospital1">Comparable exercised operating expenditure</li><li data-i18n="hbHospital2">Discharges and treatment-route counts</li><li data-i18n="hbHospital3">Beds, staff, surgeries, visits and emergencies</li><li data-i18n="hbHospital4">Year, hospital type and relevant capacity controls</li></ul></article>
+      </div>
+      <div class="data-schema reveal" role="region" aria-label="Illustrative hospital-year data schema" tabindex="0">
+        <table>
+          <thead><tr><th data-i18n="hbTableHospital">Hospital</th><th data-i18n="hbTableYear">Year</th><th data-i18n="hbTableSpend">Operating spend</th><th data-i18n="hbTableDischarges">Discharges</th><th data-i18n="hbTableArea">Area A cases</th><th data-i18n="hbTableRoute">Area A · Route 2</th></tr></thead>
+          <tbody><tr><td>H01</td><td>2023</td><td>MXN</td><td>N</td><td>N<sub>A</sub></td><td>N<sub>A,2</sub></td></tr><tr><td>H02</td><td>2023</td><td>MXN</td><td>N</td><td>N<sub>A</sub></td><td>N<sub>A,2</sub></td></tr></tbody>
+        </table>
+      </div>
+      <div class="integrity-note reveal"><p class="eyebrow" data-i18n="hbDenominator">Denominator rule</p><h3 data-i18n="hbDenominatorTitle">Use observed treated episodes—not population incidence.</h3><p data-i18n="hbDenominatorText">Incidence measures population need. This expenditure model requires the patients actually treated by each hospital. Mixing both would confound need, access, referrals and utilization.</p></div>
+    </section>
+
+    <section class="case-section benchmark-routes" id="routes">
+      <div class="case-section-head reveal"><p class="case-index">03 / <span data-i18n="hbRouteLabel">Route discovery</span></p><h2 data-i18n="hbRouteTitle">Use Market Basket to discover patterns—then convert them into usable treatment routes.</h2><p data-i18n="hbRouteIntro">Apriori or FP-Growth is applied separately within each therapeutic area. Association rules reveal co-occurrence; they do not by themselves define sequence, cost or mutually exclusive pathways.</p></div>
+      <div class="basket-metrics reveal">
+        <article><strong>Support</strong><p data-i18n="hbSupportText">How often a procedure bundle appears within the therapeutic area.</p><code>P(A ∩ B)</code></article>
+        <article><strong>Confidence</strong><p data-i18n="hbConfidenceText">How often procedure B appears when procedure A is observed.</p><code>P(B | A)</code></article>
+        <article><strong>Lift</strong><p data-i18n="hbLiftText">Whether the combination occurs more often than expected by chance.</p><code>P(B | A) / P(B)</code></article>
+      </div>
+      <div class="route-pipeline reveal" aria-label="Treatment-route construction workflow">
+        <article><span>01</span><strong data-i18n="hbRouteStep1">Stratify</strong><p data-i18n="hbRouteStep1Text">Separate episodes into 15–20 therapeutic areas.</p></article><i aria-hidden="true"></i>
+        <article><span>02</span><strong data-i18n="hbRouteStep2">Discover</strong><p data-i18n="hbRouteStep2Text">Find frequent and high-impact procedure bundles.</p></article><i aria-hidden="true"></i>
+        <article><span>03</span><strong data-i18n="hbRouteStep3">Validate</strong><p data-i18n="hbRouteStep3Text">Check annual support, coding consistency and concentration.</p></article><i aria-hidden="true"></i>
+        <article><span>04</span><strong data-i18n="hbRouteStep4">Collapse</strong><p data-i18n="hbRouteStep4Text">Create 3–6 mutually exclusive routes per area.</p></article>
+      </div>
+      <div class="stability-grid reveal">
+        <article><span data-i18n="hbStable">Stable core</span><strong data-i18n="hbStableRule">Present in ≥80% of years</strong><p data-i18n="hbStableText">Candidate for the main expenditure model.</p></article>
+        <article><span data-i18n="hbEmerging">Emerging route</span><strong data-i18n="hbEmergingRule">Material recent growth</strong><p data-i18n="hbEmergingText">Reported separately as possible technology adoption.</p></article>
+        <article><span data-i18n="hbCoding">Coding signal</span><strong data-i18n="hbCodingRule">Abrupt unsupported break</strong><p data-i18n="hbCodingText">Harmonize classifications before modeling.</p></article>
+      </div>
+      <p class="chart-caption reveal" data-i18n="hbThresholdNote">Frequency thresholds are calibrated to the available sample. Rare routes with long stays, intensive care or multiple procedures remain eligible as high-impact bundles.</p>
+    </section>
+
+    <section class="case-section benchmark-model" id="model">
+      <div class="case-section-head reveal"><p class="case-index">04 / <span data-i18n="hbModelLabel">Estimator</span></p><h2 data-i18n="hbModelTitle">Protect the clinical base; penalize only incremental route complexity.</h2><p data-i18n="hbModelIntro">Therapeutic-area counts, year effects and structural controls remain unpenalized. LASSO acts only on therapeutic-area × treatment-route counts.</p></div>
+      <div class="model-equation reveal" aria-label="Partially penalized LASSO objective">
+        <p>B<sub>ht</sub> = τ<sub>t</sub> + X′<sub>ht</sub>δ + Σ<sub>a</sub> β<sub>a</sub>N<sub>hat</sub> + Σ<sub>a,r</sub> γ<sub>ar</sub>N<sub>hart</sub> + ε<sub>ht</sub></p>
+        <div><span data-i18n="hbUnpenalized">Unpenalized</span><strong>τ<sub>t</sub>, δ, β<sub>a</sub></strong></div><div class="model-penalty"><span data-i18n="hbPenalized">LASSO penalty</span><strong>λ Σ |γ<sub>ar</sub>|</strong></div>
+      </div>
+      <div class="model-interpretation reveal">
+        <article><span>β<sub>a</sub></span><h3 data-i18n="hbBaseTitle">Base therapeutic-area component</h3><p data-i18n="hbBaseText">The budget association of an additional treated episode following the reference route.</p></article>
+        <article><span>γ<sub>ar</sub></span><h3 data-i18n="hbIncrementTitle">Incremental route component</h3><p data-i18n="hbIncrementText">The additional association for a specific treatment route within that therapeutic area.</p></article>
+        <article><span>X′δ</span><h3 data-i18n="hbHospitalEffectTitle">Structural-capacity component</h3><p data-i18n="hbHospitalEffectText">Beds, staff and other observed outputs needed to compare institutions on a common basis.</p></article>
+      </div>
+      <div class="model-caution reveal"><strong data-i18n="hbHospitalFERule">Why the primary benchmark omits hospital fixed effects</strong><p data-i18n="hbHospitalFEText">Hospital indicators would absorb the differences the benchmark is intended to reveal. Repeated observations are handled through hospital-grouped validation and clustered uncertainty; a hierarchical random intercept can be reported as a sensitivity analysis.</p></div>
+      <div class="integrity-note reveal"><p class="eyebrow" data-i18n="hbIdentification">Identification rule</p><h3 data-i18n="hbIdentificationTitle">Every therapeutic area needs an omitted reference route.</h3><p data-i18n="hbIdentificationText">If total area cases equal the sum of every route count, including all routes creates perfect collinearity. The base coefficient represents the reference pathway; penalized route coefficients represent deviations from it.</p></div>
+    </section>
+
+    <section class="case-section benchmark-validation">
+      <div class="case-section-head reveal"><p class="case-index">05 / <span data-i18n="hbValidationLabel">Validation</span></p><h2 data-i18n="hbValidationTitle">Selection is only useful if it survives outside the hospital that generated it.</h2><p data-i18n="hbValidationIntro">The workflow emphasizes transportability and stability rather than a high in-sample fit.</p></div>
+      <div class="method-steps reveal">
+        <article class="method-step"><span class="method-number">01</span><div><p class="eyebrow" data-i18n="hbVal1Tag">Preprocess</p><h3 data-i18n="hbVal1Title">Harmonize and standardize</h3><p data-i18n="hbVal1Text">Align expenditure definitions, deflate monetary values and standardize only penalized predictors.</p></div></article>
+        <article class="method-step"><span class="method-number">02</span><div><p class="eyebrow" data-i18n="hbVal2Tag">Cross-validation</p><h3 data-i18n="hbVal2Title">Leave complete hospitals out</h3><p data-i18n="hbVal2Text">Tune the penalty on institutions absent from training, avoiding leakage across years of the same hospital.</p></div></article>
+        <article class="method-step"><span class="method-number">03</span><div><p class="eyebrow" data-i18n="hbVal3Tag">Stability</p><h3 data-i18n="hbVal3Title">Bootstrap selected routes</h3><p data-i18n="hbVal3Text">Retain interactions that recur across resamples instead of relying on one arbitrary selection.</p></div></article>
+        <article class="method-step"><span class="method-number">04</span><div><p class="eyebrow" data-i18n="hbVal4Tag">Interpretation</p><h3 data-i18n="hbVal4Title">Refit after selection</h3><p data-i18n="hbVal4Text">Estimate a transparent post-LASSO or hierarchical model using the stable route set and report uncertainty.</p></div></article>
+      </div>
+    </section>
+
+    <section class="case-benefits" id="outputs">
+      <div class="case-benefits-intro reveal"><p class="case-index">06 / <span data-i18n="hbOutputsLabel">Decision outputs</span></p><h2 data-i18n="hbOutputsTitle">A benchmark that points to questions—not verdicts.</h2><p data-i18n="hbOutputsIntro">Each output is designed for screening, comparison and budget dialogue.</p></div>
+      <div class="benefit-grid">
+        <article class="reveal"><span>01</span><h3 data-i18n="hbOutput1Title">Relative resource intensity</h3><p data-i18n="hbOutput1Text">Normalize stable route coefficients against a clinically meaningful reference pathway.</p></article>
+        <article class="reveal"><span>02</span><h3 data-i18n="hbOutput2Title">Expected expenditure</h3><p data-i18n="hbOutput2Text">Estimate expenditure conditional on scale, capacity, therapeutic mix and treatment routes.</p></article>
+        <article class="reveal"><span>03</span><h3 data-i18n="hbOutput3Title">Observed / expected ratio</h3><p data-i18n="hbOutput3Text">Flag institutions above or below their comparable benchmark, with uncertainty.</p></article>
+        <article class="reveal"><span>04</span><h3 data-i18n="hbOutput4Title">Route stability atlas</h3><p data-i18n="hbOutput4Text">Separate stable, emerging, disappearing and potentially recoded treatment patterns.</p></article>
+        <article class="reveal"><span>05</span><h3 data-i18n="hbOutput5Title">Budget expenditure per discharge</h3><p data-i18n="hbOutput5Text">Report operating expenditure divided by discharges as a descriptive indicator—not an audited patient cost.</p></article>
+        <article class="reveal"><span>06</span><h3 data-i18n="hbOutput6Title">Geographic view with guardrails</h3><p data-i18n="hbOutput6Text">Map hospital indicators without calling them territorial per-capita spending unless patient origin defines the catchment.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section benchmark-limits">
+      <div class="case-section-head reveal"><p class="case-index">07 / <span data-i18n="hbLimitsLabel">Guardrails</span></p><h2 data-i18n="hbLimitsTitle">What must remain visible when the benchmark is used.</h2><p data-i18n="hbLimitsIntro">Third-level budgets cover more than inpatient episodes, and referral hospitals do not serve only the population around their address.</p></div>
+      <div class="limitations-grid reveal">
+        <article><strong data-i18n="hbLimit1Title">Budget scope</strong><p data-i18n="hbLimit1Text">Separate operating expenditure from investment and document payroll, teaching and research components where possible.</p></article>
+        <article><strong data-i18n="hbLimit2Title">Aggregate identification</strong><p data-i18n="hbLimit2Text">Coefficients are hospital-level budget associations, not audited patient-level costs or causal treatment effects.</p></article>
+        <article><strong data-i18n="hbLimit3Title">Coding quality</strong><p data-i18n="hbLimit3Text">Changes in classification, completeness or billing practice can resemble a clinical shift.</p></article>
+        <article><strong data-i18n="hbLimit4Title">Performance language</strong><p data-i18n="hbLimit4Text">A high observed-to-expected ratio prompts review; it does not by itself establish waste, inefficiency or overpricing.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section benchmark-skills">
+      <div class="case-section-head reveal"><p class="case-index">08 / <span data-i18n="hbSkillsLabel">Capabilities</span></p><h2 data-i18n="hbSkillsTitle">A compact health-economics product built from difficult public data.</h2><p data-i18n="hbSkillsIntro">The MVP connects clinical structure, predictive discipline and careful decision language.</p></div>
+      <div class="capability-list reveal"><span data-i18n="hbSkill1">Hospital economics</span><span data-i18n="hbSkill2">Case-mix adjustment</span><span data-i18n="hbSkill3">Market Basket analysis</span><span data-i18n="hbSkill4">Regularized regression</span><span data-i18n="hbSkill5">Provider benchmarking</span><span data-i18n="hbSkill6">Administrative data integration</span><span data-i18n="hbSkill7">Model governance</span></div>
+    </section>
+
+    <section class="contact case-contact">
+      <p class="eyebrow" data-i18n="hbContactLabel">Hospital analytics</p>
+      <h2 data-i18n="hbContactTitle">Make complex hospital activity comparable without hiding uncertainty.</h2>
+      <p data-i18n="hbContactText">I combine administrative health data, econometrics and interpretable machine learning to build decision-ready provider benchmarks.</p>
+      <div class="contact-links"><a href="mailto:cgruiz@tuta.io">cgruiz@tuta.io</a><a href="https://www.linkedin.com/in/cgruiz0" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="index.html#pharma" data-i18n="moreCases">More case studies →</a></div>
+    </section>
+  </main>
+
+  <footer><p>© <span id="year"></span> Carlos Garcia-de-la-Cadena</p><a href="#top" data-i18n="backTop">Back to top ↑</a></footer>
+</body>
+</html>
