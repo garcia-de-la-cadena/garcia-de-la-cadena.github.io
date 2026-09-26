@@ -24,14 +24,7 @@ const translations = {
     loeDecision: "Un marco que separe las señales tempranas de desplazamiento en formularios del cambio real en prescripción y defina la evidencia de claims necesaria para cuantificar adopción.",
     hospitalApproach: "Usar egresos DGIS por hospital y diagnóstico para construir denominadores de actividad y case mix, y vincularlos con protocolos de uso y datos de compra o costo unitario.",
     hospitalDecision: "Benchmarks hospitalarios de gasto que identifiquen dónde el volumen, la complejidad o los patrones de compra ameritan revisión.",
-    contactText: "Disponible para posiciones y colaboraciones en analytics farmacéutico, estrategia de mercado y economía de la salud.",
-    hospitalAnalytics: "Estrategia hospitalaria",
-    hospitalTitle: "Infraestructura pública y demanda hospitalaria privada",
-    hospitalSummary: "Un caso de flujos de pacientes que traduce cambios en capacidad pública en escenarios de volumen e ingresos en riesgo para hospitales privados.",
-    hospitalQuestion: "¿Cómo puede la nueva capacidad pública modificar la demanda hospitalaria privada local y exponer líneas de servicio con costos fijos a riesgo de volumen?",
-    hospitalApproach: "Traduje evidencia administrativa de flujos en un escenario para el hospital incumbente, una calculadora editable de ingresos en riesgo y señales de redistribución entre redes públicas.",
-    hospitalDecision: "Aclaré qué cambios de infraestructura y redes de referencia deben vigilar los líderes hospitalarios antes de que los movimientos de demanda aparezcan en el desempeño financiero.",
-    viewHospitalCase: "Explorar el caso completo →"
+    contactText: "Disponible para posiciones y colaboraciones en analytics farmacéutico, estrategia de mercado y economía de la salud."
   }
 };
 

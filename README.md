@@ -10,8 +10,6 @@ The bilingual research page `violence-formal-employment.html` summarizes the acc
 
 The bilingual strategy page `breast-cancer-patient-journey.html` connects breast-cancer treatment pathways, biomarker-driven decisions, access evidence in Mexico and the competitive pipeline. The home page presents all applied projects in one Strategy & Market Research Portfolio.
 
-The bilingual hospital-strategy case `hospital-strategy.html` translates evidence on public infrastructure, patient flows and network reorganization into an editable private-provider volume and revenue-risk scenario. It is presented as an independent strategy case, includes transparent interpretation limits and has no downloadable source materials.
-
 ## Publish on GitHub Pages
 
 1. Create a public repository named `garcia-de-la-cadena.github.io`.
