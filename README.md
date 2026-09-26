@@ -8,8 +8,6 @@ The bilingual doctoral dissertation overview lives at `doctoral-thesis.html`. It
 
 The bilingual research page `violence-formal-employment.html` summarizes the accepted paper on homicide surges, formal employment and local capacity. It includes the four supplied research figures, a native HTML results table, and a carefully bounded discussion of employment-linked healthcare access. The final journal link will be added after publication in *Carta Económica Regional*.
 
-The bilingual strategy page `breast-cancer-patient-journey.html` connects breast-cancer treatment pathways, biomarker-driven decisions, access evidence in Mexico and the competitive pipeline. The home page presents all applied projects in one Strategy & Market Research Portfolio.
-
 ## Publish on GitHub Pages
 
 1. Create a public repository named `garcia-de-la-cadena.github.io`.
