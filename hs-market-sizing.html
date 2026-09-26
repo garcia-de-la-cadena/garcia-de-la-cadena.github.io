@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en" data-title-en="HS Market Sizing | Carlos Garcia-de-la-Cadena" data-title-es="Market Sizing de HS | Carlos Garcia-de-la-Cadena">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A Bayesian, clinically explicit market-sizing case study for hidradenitis suppurativa in Mexico.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#275317">
+  <title>HS Market Sizing | Carlos Garcia-de-la-Cadena</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="hs-case.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="index.html#top" aria-label="Carlos Garcia-de-la-Cadena — home">
+      <span>CG</span>
+      <span class="wordmark-name">Carlos Garcia-de-la-Cadena</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only" data-i18n="menu">Open menu</span>
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Case study navigation">
+      <a href="#brief" data-i18n="caseNavBrief">Brief</a>
+      <a href="#method" data-i18n="caseNavMethod">Methodology</a>
+      <a href="#results" data-i18n="caseNavResults">Results</a>
+      <a href="#limitations" data-i18n="caseNavLimits">Limitations</a>
+      <a href="#deliverables" data-i18n="caseNavFiles">Deliverables</a>
+      <a href="index.html#pharma" data-i18n="caseNavPortfolio">Portfolio</a>
+    </nav>
+    <div class="language-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <span aria-hidden="true">/</span>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero" id="top">
+      <div class="case-hero-main reveal">
+        <a class="case-back" href="index.html#pharma" data-i18n="backPortfolio">← Back to pharma portfolio</a>
+        <p class="hero-kicker" data-i18n="caseKicker">Pharma case study 01 · Market sizing</p>
+        <h1 data-i18n="caseTitle">Hidradenitis suppurativa market sizing in Mexico.</h1>
+        <p class="case-deck" data-i18n="caseDeck">A Bayesian, clinically explicit framework that converts fragmented epidemiological evidence into a transparent treated-market scenario.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#results" data-i18n="seeResults">See the results</a>
+          <a class="button button-quiet" href="downloads/Market_sizing_HS_Mexico_AxiomIA.pptx" download data-i18n="downloadDeck">Download presentation</a>
+        </div>
+      </div>
+      <aside class="case-hero-aside reveal" aria-label="Case study facts">
+        <div><span data-i18n="geography">Geography</span><strong>Mexico</strong></div>
+        <div><span data-i18n="therapyArea">Therapy area</span><strong data-i18n="immunoderm">Immunology · Dermatology</strong></div>
+        <div><span data-i18n="evidenceCut">Evidence cut</span><strong data-i18n="sept2026">September 2026</strong></div>
+        <div><span data-i18n="tooling">Tooling</span><strong>Python · Power BI · Excel</strong></div>
+      </aside>
+    </section>
+
+    <section class="case-snapshot reveal" aria-label="Executive result">
+      <div>
+        <span data-i18n="prevalentP50">Prevalent population · P50</span>
+        <strong>1.18M</strong>
+      </div>
+      <div>
+        <span data-i18n="diagnosedP50">Diagnosed proxy · P50</span>
+        <strong>806K</strong>
+      </div>
+      <div>
+        <span data-i18n="moderateP50">Diagnosed moderate/severe · P50</span>
+        <strong>378K</strong>
+      </div>
+      <div class="snapshot-accent">
+        <span data-i18n="persistentP50">Persistent public patient-years · P50</span>
+        <strong>5,204</strong>
+      </div>
+    </section>
+
+    <section class="case-section" id="brief">
+      <div class="case-section-head reveal">
+        <p class="case-index">01 / <span data-i18n="briefLabel">The brief</span></p>
+        <h2 data-i18n="briefTitle">Prevalence is not the treated market.</h2>
+      </div>
+      <div class="case-two-col">
+        <div class="case-lede reveal">
+          <p data-i18n="briefLede">The commercial question was not simply how many people live with HS. It was how many could plausibly reach and persist on a biologic in Mexico’s public sector—and how the opportunity could be distributed across molecules with overlapping indications.</p>
+        </div>
+        <div class="brief-list reveal">
+          <article><span>01</span><div><h3 data-i18n="briefQ1">How many people live with HS?</h3><p data-i18n="briefA1">Translate heterogeneous global evidence to Mexico’s age-sex structure.</p></div></article>
+          <article><span>02</span><div><h3 data-i18n="briefQ2">How many are clinically visible?</h3><p data-i18n="briefA2">Model onset, disease duration, diagnostic delay and severity.</p></div></article>
+          <article><span>03</span><div><h3 data-i18n="briefQ3">How many reach treatment?</h3><p data-i18n="briefA3">Make every public-access transition explicit and uncertain.</p></div></article>
+          <article><span>04</span><div><h3 data-i18n="briefQ4">Which molecule could serve them?</h3><p data-i18n="briefA4">Separate HS demand from competing indications and launch scenarios.</p></div></article>
+        </div>
+      </div>
+      <div class="case-callout reveal">
+        <p class="eyebrow" data-i18n="decisionUse">Decision use</p>
+        <p data-i18n="decisionUseText">The output is a planning range for opportunity assessment, patient-finding priorities and evidence-generation—not a claim of observed demand, sales or market share.</p>
+      </div>
+    </section>
+
+    <section class="case-section method-section" id="method">
+      <div class="case-section-head reveal">
+        <p class="case-index">02 / <span data-i18n="methodLabel">Methodology</span></p>
+        <h2 data-i18n="methodTitle">One connected model, five explicit modules.</h2>
+        <p data-i18n="methodIntro">Each module answers a different question and passes full uncertainty—not only a point estimate—to the next stage.</p>
+      </div>
+
+      <div class="evidence-legend reveal" aria-label="Evidence classification">
+        <div><span class="legend-dot observed"></span><strong data-i18n="observed">Observed</strong><p data-i18n="observedText">Direct study counts or population data.</p></div>
+        <div><span class="legend-dot transported"></span><strong data-i18n="transported">Transported</strong><p data-i18n="transportedText">Clinical parameters adapted from external populations.</p></div>
+        <div><span class="legend-dot assumed"></span><strong data-i18n="assumed">Scenario assumption</strong><p data-i18n="assumedText">Editable access priors where Mexican data are unobservable.</p></div>
+      </div>
+
+      <div class="method-steps">
+        <article class="method-step reveal">
+          <div class="method-number">01</div>
+          <div class="method-copy">
+            <p class="eyebrow" data-i18n="method1Tag">Evidence architecture</p>
+            <h3 data-i18n="method1Title">Keep unlike evidence separate</h3>
+            <p data-i18n="method1Text">The primary likelihood uses 247 clinically confirmed cases among 22,743 participants across 23 GHiSA countries under one harmonized protocol. Telephone, claims and hospital studies from Latin America remain benchmarks because they measure different constructs.</p>
+          </div>
+          <div class="method-proof">
+            <strong>23</strong><span data-i18n="countries">countries</span>
+            <strong>22,743</strong><span data-i18n="participants">participants</span>
+            <strong>247</strong><span data-i18n="confirmedCases">confirmed cases</span>
+          </div>
+        </article>
+
+        <article class="method-step reveal">
+          <div class="method-number">02</div>
+          <div class="method-copy">
+            <p class="eyebrow" data-i18n="method2Tag">Bayesian prevalence</p>
+            <h3 data-i18n="method2Title">Estimate risk by age and sex, then poststratify to Mexico</h3>
+            <p data-i18n="method2Text">A binomial-logit hierarchical model combines country effects with regularized age and sex patterns. Each posterior draw is reweighted to Mexico’s 2024 population pyramid, then receives an explicit transportability effect for a country not directly observed.</p>
+            <code>p(MX) = Σ age,sex weight(MX) × risk(age,sex,country)</code>
+          </div>
+          <div class="method-status">
+            <span class="status observed" data-i18n="observed">Observed</span>
+            <span class="status transported" data-i18n="transported">Transported</span>
+          </div>
+        </article>
+
+        <article class="method-step reveal">
+          <div class="method-number">03</div>
+          <div class="method-copy">
+            <p class="eyebrow" data-i18n="method3Tag">Clinical-demographic journey</p>
+            <h3 data-i18n="method3Title">Link diagnosis to disease duration—not age alone</h3>
+            <p data-i18n="method3Text">Synthetic profiles combine bimodal age of onset, current age and a log-normal time to diagnosis. Severity uses a discounted Dirichlet prior from community evidence. The model does not assume that every older patient is automatically severe.</p>
+            <p class="method-note" data-i18n="method3Note">Sensitivity tests diagnostic-delay means of 7, 10 and 14 years and alternative severity mixes.</p>
+          </div>
+          <div class="method-status">
+            <span class="status transported" data-i18n="transported">Transported</span>
+          </div>
+        </article>
+
+        <article class="method-step reveal">
+          <div class="method-number">04</div>
+          <div class="method-copy">
+            <p class="eyebrow" data-i18n="method4Tag">Public access</p>
+            <h3 data-i18n="method4Title">Model the bottlenecks instead of inventing demand</h3>
+            <p data-i18n="method4Text">Because no national series of negotiated demand, delivery, dispensing or private prescriptions by indication was observable, the model uses editable Beta-PERT priors for active disease, conventional failure, clinical compatibility, public coverage, specialist evaluation, initiation and persistence.</p>
+          </div>
+          <div class="method-status">
+            <span class="status assumed" data-i18n="assumed">Scenario assumption</span>
+          </div>
+        </article>
+
+        <article class="method-step reveal">
+          <div class="method-number">05</div>
+          <div class="method-copy">
+            <p class="eyebrow" data-i18n="method5Tag">Molecule and indication</p>
+            <h3 data-i18n="method5Title">Allocate treated patients without dividing sales by indications</h3>
+            <p data-i18n="method5Text">A Dirichlet scenario allocates persistent patient-years across adalimumab, secukinumab and bimekizumab. Separate indication pools estimate the potential HS share of units for multi-indication molecules. Current-evidence and hypothetical-launch scenarios remain distinct.</p>
+          </div>
+          <div class="method-status">
+            <span class="status assumed" data-i18n="assumed">Scenario assumption</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-benefits">
+      <div class="case-benefits-intro reveal">
+        <p class="case-index">03 / <span data-i18n="benefitsLabel">Why this approach</span></p>
+        <h2 data-i18n="benefitsTitle">The model is useful because its uncertainty is structured.</h2>
+        <p data-i18n="benefitsIntro">The objective is not complexity for its own sake. It is to prevent false precision while keeping the estimate actionable and easy to update.</p>
+      </div>
+      <div class="benefit-grid">
+        <article class="reveal"><span>01</span><h3 data-i18n="benefit1Title">Comparable evidence only</h3><p data-i18n="benefit1Text">Avoids a naïve average of surveys, claims and hospital records that estimate different populations.</p></article>
+        <article class="reveal"><span>02</span><h3 data-i18n="benefit2Title">Mexico-specific structure</h3><p data-i18n="benefit2Text">Uses Mexico’s age-sex pyramid instead of assigning disease randomly to a national total.</p></article>
+        <article class="reveal"><span>03</span><h3 data-i18n="benefit3Title">End-to-end uncertainty</h3><p data-i18n="benefit3Text">Propagates 50,000 draws through prevalence, diagnosis, severity, access and molecule allocation.</p></article>
+        <article class="reveal"><span>04</span><h3 data-i18n="benefit4Title">Transparent assumptions</h3><p data-i18n="benefit4Text">Labels what is observed, transported or assumed, so reviewers can challenge the right inputs.</p></article>
+        <article class="reveal"><span>05</span><h3 data-i18n="benefit5Title">Decision-ready outputs</h3><p data-i18n="benefit5Text">Shows where patients are lost and which parameter would most improve the commercial estimate.</p></article>
+        <article class="reveal"><span>06</span><h3 data-i18n="benefit6Title">Designed to update</h3><p data-i18n="benefit6Text">Demand, dispensing, prescriptions or expert validation can replace priors without rebuilding the model.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section results-section" id="results">
+      <div class="case-section-head reveal">
+        <p class="case-index">04 / <span data-i18n="resultsLabel">Results</span></p>
+        <h2 data-i18n="resultsTitle">A wide epidemiological range becomes a specific access hypothesis.</h2>
+        <p data-i18n="resultsIntro">Use the quantile control to inspect each stage. The values are marginal P10, P50 and P90 planning views, not three deterministic patient cohorts.</p>
+      </div>
+
+      <div class="quantile-switch reveal" role="group" aria-label="Planning quantile">
+        <button type="button" data-quantile="p10" aria-pressed="false">P10 <span data-i18n="lower">Lower</span></button>
+        <button type="button" data-quantile="p50" aria-pressed="true">P50 <span data-i18n="central">Central</span></button>
+        <button type="button" data-quantile="p90" aria-pressed="false">P90 <span data-i18n="upper">Upper</span></button>
+      </div>
+
+      <div class="result-block reveal">
+        <div class="result-heading">
+          <div><p class="eyebrow" data-i18n="clinicalFunnel">Clinical funnel</p><h3 data-i18n="fromDisease">From underlying disease to clinically visible pool</h3></div>
+          <p data-i18n="clinicalNote">Diagnosis is conditioned on modeled disease duration; moderate/severe status is a separate uncertain distribution.</p>
+        </div>
+        <div class="funnel-chart clinical-chart">
+          <div class="funnel-row"><div class="funnel-label"><span data-i18n="truePrevalent">True prevalent HS</span><strong data-result="prevalent">1,175,928</strong></div><div class="funnel-track"><i style="--width:100%"></i></div></div>
+          <div class="funnel-row"><div class="funnel-label"><span data-i18n="diagnosedProxy">Diagnosed proxy</span><strong data-result="diagnosed">805,897</strong></div><div class="funnel-track"><i style="--width:69%"></i></div></div>
+          <div class="funnel-row"><div class="funnel-label"><span data-i18n="diagnosedModSev">Diagnosed moderate/severe</span><strong data-result="moderate">377,822</strong></div><div class="funnel-track"><i style="--width:32%"></i></div></div>
+        </div>
+      </div>
+
+      <div class="result-block reveal">
+        <div class="result-heading">
+          <div><p class="eyebrow" data-i18n="publicAccess">Public access</p><h3 data-i18n="fromEligible">From clinical pool to persistent patient-years</h3></div>
+          <p data-i18n="accessNote">The largest decision-relevant losses occur at specialist evaluation and biologic initiation; both are scenario assumptions pending Mexican calibration.</p>
+        </div>
+        <div class="funnel-chart access-chart">
+          <div class="funnel-row"><div class="funnel-label"><span data-i18n="publicPool">Public-sector clinical pool</span><strong data-result="public">130,332</strong></div><div class="funnel-track"><i style="--width:100%"></i></div></div>
+          <div class="funnel-row"><div class="funnel-label"><span data-i18n="specialist">Specialist-evaluated</span><strong data-result="specialist">32,623</strong></div><div class="funnel-track"><i style="--width:25%"></i></div></div>
+          <div class="funnel-row"><div class="funnel-label"><span data-i18n="initiated">Biologic initiated</span><strong data-result="initiated">8,174</strong></div><div class="funnel-track"><i style="--width:6.3%"></i></div></div>
+          <div class="funnel-row"><div class="funnel-label"><span data-i18n="persistent">Persistent patient-years</span><strong data-result="persistent">5,204</strong></div><div class="funnel-track"><i style="--width:4%"></i></div></div>
+        </div>
+      </div>
+
+      <div class="result-grid">
+        <article class="result-card reveal">
+          <p class="eyebrow" data-i18n="prevalenceRange">Mexico prevalence range</p>
+          <h3 data-i18n="posteriorTitle">Posterior predictive planning scenarios</h3>
+          <div class="prevalence-bars">
+            <div><span>P10</span><i style="--width:7%"></i><strong>0.234%</strong></div>
+            <div><span>P50</span><i style="--width:27%"></i><strong>0.899%</strong></div>
+            <div><span>P90</span><i style="--width:100%"></i><strong>3.354%</strong></div>
+          </div>
+          <p class="chart-caption" data-i18n="posteriorCaption">The width reflects country heterogeneity and the absence of a comparable Mexican population study—not sampling precision alone.</p>
+        </article>
+
+        <article class="result-card reveal">
+          <div class="molecule-card-head">
+            <div><p class="eyebrow" data-i18n="moleculeMix">Molecule allocation</p><h3 data-i18n="patientYearsP50">P50 persistent patient-years</h3></div>
+            <div class="scenario-switch" role="group" aria-label="Molecule scenario">
+              <button type="button" data-scenario="current" aria-pressed="true" data-i18n="current">Current</button>
+              <button type="button" data-scenario="launch" aria-pressed="false" data-i18n="launch">Launch</button>
+            </div>
+          </div>
+          <div class="molecule-bars">
+            <div><span>Adalimumab</span><i data-molecule-bar="adalimumab" style="--width:100%"></i><strong data-molecule="adalimumab">4,408</strong></div>
+            <div><span>Secukinumab</span><i data-molecule-bar="secukinumab" style="--width:16.2%"></i><strong data-molecule="secukinumab">716</strong></div>
+            <div><span>Bimekizumab</span><i data-molecule-bar="bimekizumab" style="--width:0%"></i><strong data-molecule="bimekizumab">0</strong></div>
+          </div>
+          <p class="chart-caption" data-i18n="moleculeCaption">The current zero for bimekizumab is structural: no Mexican public incorporation anchor for HS was observed. It is not an inference of zero private use.</p>
+        </article>
+      </div>
+
+      <div class="insight-strip reveal">
+        <div><span data-i18n="delay7">Diagnosed with 7-year mean delay</span><strong>77.1%</strong></div>
+        <div><span data-i18n="delay10">Diagnosed with 10-year mean delay</span><strong>68.9%</strong></div>
+        <div><span data-i18n="delay14">Diagnosed with 14-year mean delay</span><strong>58.8%</strong></div>
+      </div>
+    </section>
+
+    <section class="case-section limitations-section" id="limitations">
+      <div class="case-section-head reveal">
+        <p class="case-index">05 / <span data-i18n="limitsLabel">Interpretation</span></p>
+        <h2 data-i18n="limitsTitle">What the result can—and cannot—support.</h2>
+      </div>
+      <div class="limitations-grid">
+        <article class="reveal"><strong data-i18n="limit1Title">No national Mexican prevalence study</strong><p data-i18n="limit1Text">GHiSA evidence is transported through demographic poststratification and an explicit country uncertainty term.</p></article>
+        <article class="reveal"><strong data-i18n="limit2Title">Diagnosis and severity are proxies</strong><p data-i18n="limit2Text">Both are informed by non-Mexican cohorts, discounted for indirectness and tested in sensitivity analyses.</p></article>
+        <article class="reveal"><strong data-i18n="limit3Title">Access is prior-predictive</strong><p data-i18n="limit3Text">There is no verified national demand, delivery, dispensing or prescription series conditioning the public funnel.</p></article>
+        <article class="reveal"><strong data-i18n="limit4Title">Molecule mix is not market share</strong><p data-i18n="limit4Text">It is a scenario allocation of potential patient-years, not observed sales, procurement or treated patients.</p></article>
+      </div>
+      <div class="next-evidence reveal">
+        <p class="eyebrow" data-i18n="bestNextEvidence">Highest-value next evidence</p>
+        <h3 data-i18n="nextEvidenceTitle">Calibrate with institution-level demand, award and delivery by presentation.</h3>
+        <p data-i18n="nextEvidenceText">The model is intentionally built so these observations can update the public-access priors. Prescription or patient counts by indication would be the second most valuable addition.</p>
+      </div>
+    </section>
+
+    <section class="case-section deliverables-section" id="deliverables">
+      <div class="case-section-head reveal">
+        <p class="case-index">06 / <span data-i18n="filesLabel">Deliverables</span></p>
+        <h2 data-i18n="filesTitle">From analytical model to an executive conversation.</h2>
+        <p data-i18n="filesIntro">The work product includes a management-ready narrative and auditable analytical outputs designed for later Power BI deployment.</p>
+      </div>
+      <div class="download-list">
+        <a class="download-row reveal" href="downloads/Market_sizing_HS_Mexico_AxiomIA.pptx" download>
+          <span class="download-type">PPTX</span>
+          <span><strong data-i18n="deckTitle">Executive market-sizing presentation</strong><small data-i18n="deckText">Decision story, methods, results and implications.</small></span>
+          <span aria-hidden="true">↓</span>
+        </a>
+        <a class="download-row reveal" href="downloads/HS_market_sizing_evidence.xlsx" download>
+          <span class="download-type">XLSX</span>
+          <span><strong data-i18n="workbookTitle">Evidence and scenario workbook</strong><small data-i18n="workbookText">Inputs, outputs, diagnostics and audit tables.</small></span>
+          <span aria-hidden="true">↓</span>
+        </a>
+        <a class="download-row reveal" href="https://github.com/garcia-de-la-cadena" target="_blank" rel="noreferrer">
+          <span class="download-type">CODE</span>
+          <span><strong data-i18n="codeTitle">Reproducible Python workflow</strong><small data-i18n="codeText">Modular scripts, validation checks and Power BI-ready tables.</small></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact case-contact" id="contact">
+      <p class="eyebrow reveal" data-i18n="contactLabel">Contact</p>
+      <h2 class="reveal" data-i18n="caseContactTitle">Need a transparent answer to an incomplete-data problem?</h2>
+      <p class="reveal" data-i18n="caseContactText">I build decision models that make the evidence, assumptions and uncertainty visible.</p>
+      <div class="contact-links reveal">
+        <a href="mailto:cgruiz@tuta.io">cgruiz@tuta.io</a>
+        <a href="https://www.linkedin.com/in/cgruiz0" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="index.html#pharma" data-i18n="moreCases">More case studies →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Carlos Garcia-de-la-Cadena</p>
+    <a href="#top" data-i18n="backTop">Back to top ↑</a>
+  </footer>
+</body>
+</html>

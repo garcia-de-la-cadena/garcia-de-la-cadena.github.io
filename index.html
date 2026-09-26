@@ -26,8 +26,7 @@
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
       <a href="#about" data-i18n="navAbout">About</a>
       <a href="#publications" data-i18n="navPublications">Publications</a>
-      <a href="#pharma" data-i18n="navPharma">Pharma portfolio</a>
-      <a href="#commercial" data-i18n="navCommercial">Commercial portfolio</a>
+      <a href="#pharma" data-i18n="navPharma">Strategy & market research</a>
       <a href="#resume" data-i18n="navResume">Résumé</a>
       <a href="#contact" data-i18n="navContact">Contact</a>
     </nav>
@@ -96,12 +95,14 @@
             <h3>Three Essays on the Economics of Health</h3>
             <p data-i18n="pubThesis">How changes in public healthcare provision and institutional design affect maternal and infant health in a fragmented system.</p>
             <div class="tags"><span>Health economics</span><span>Causal inference</span><span>Mexico</span></div>
+            <a class="case-link" href="doctoral-thesis.html" data-i18n="viewThesisCase">Explore the dissertation →</a>
           </article>
           <article class="publication reveal">
             <div class="publication-meta"><span data-i18n="pubTypePaper">Research paper</span><span data-i18n="accepted">Accepted</span></div>
             <h3 data-i18n="violenceTitle">Violence, formal employment and local capacity</h3>
             <p data-i18n="violenceText">Synthetic-control evidence on how episodes of criminal violence affect municipal formal employment and economic recovery.</p>
             <div class="tags"><span>Labor</span><span>Synthetic control</span><span>Public policy</span></div>
+            <a class="case-link" href="violence-formal-employment.html" data-i18n="viewViolenceCase">Explore the paper →</a>
           </article>
           <article class="publication reveal">
             <div class="publication-meta"><span data-i18n="pubTypeWorking">Working paper</span><span>2013–2025</span></div>
@@ -114,11 +115,11 @@
     </section>
 
     <section class="section portfolio" id="pharma">
-      <div class="section-label reveal"><span>03</span><p data-i18n="pharmaLabel">Pharma portfolio</p></div>
+      <div class="section-label reveal"><span>03</span><p data-i18n="pharmaLabel">Strategy & market research portfolio</p></div>
       <div class="section-content">
         <div class="section-heading reveal">
-          <h2 data-i18n="pharmaTitle">Strategy grounded in patients, markets and evidence.</h2>
-          <p data-i18n="pharmaIntro">Selected work across market opportunity, pricing, access and specialty therapies. Client-sensitive details are intentionally omitted.</p>
+          <h2 data-i18n="pharmaTitle">Strategy grounded in patients, access and market evidence.</h2>
+          <p data-i18n="pharmaIntro">Selected work across market opportunity, treatment pathways, formulary intelligence, forecasting and healthcare-resource research.</p>
         </div>
         <div class="project-grid">
           <details class="project-card featured reveal">
@@ -126,41 +127,43 @@
               <span class="project-number">01</span>
               <span class="project-area" data-i18n="marketSizing">Market sizing</span>
               <h3 data-i18n="hsTitle">Hidradenitis suppurativa market opportunity</h3>
-              <p data-i18n="hsSummary">A structured estimate of the addressable market under incomplete information.</p>
+              <p data-i18n="hsSummary">A Bayesian estimate of the treated-market opportunity under incomplete information.</p>
               <span class="expand" data-i18n="openCase">Case details</span>
             </summary>
             <div class="project-detail">
               <p><strong data-i18n="question">Question</strong><span data-i18n="hsQuestion">How large is the commercially addressable population once diagnosis, treatment and access constraints are considered?</span></p>
-              <p><strong data-i18n="approach">Approach</strong><span data-i18n="hsApproach">Triangulated epidemiology, prescriptions, patient-flow assumptions and commercial evidence; documented uncertainty and decision-critical assumptions.</span></p>
-              <p><strong data-i18n="decision">Decision</strong><span data-i18n="hsDecision">Converted the estimate into implications for patient identification, opportunity prioritization and commercial planning.</span></p>
+              <p><strong data-i18n="approach">Approach</strong><span data-i18n="hsApproach">Combined standardized epidemiology, Mexico’s age-sex structure, diagnostic delay, severity and explicit access priors in a reproducible Bayesian workflow.</span></p>
+              <p><strong data-i18n="decision">Decision</strong><span data-i18n="hsDecision">Estimated a P50 of 5,204 persistent public-sector patient-years and made the principal access uncertainties visible.</span></p>
+              <a class="case-link" href="hs-market-sizing.html" data-i18n="viewFullCase">View the full case study →</a>
             </div>
           </details>
           <details class="project-card reveal">
             <summary>
               <span class="project-number">02</span>
-              <span class="project-area" data-i18n="pricingForecasting">Pricing & forecasting</span>
-              <h3 data-i18n="pricingTitle">Specialty-biopharma pricing and revenue scenarios</h3>
-              <p data-i18n="pricingSummary">Competitive positioning, demand response and revenue implications under alternative assumptions.</p>
+              <span class="project-area" data-i18n="pricingForecasting">Formulary intelligence</span>
+              <h3 data-i18n="pricingTitle">Medicare Part D formulary and pharmacy-network intelligence</h3>
+              <p data-i18n="pricingSummary">Monthly monitoring of coverage, utilization-management signals and network availability across prescription drug plans.</p>
               <span class="expand" data-i18n="openCase">Case details</span>
             </summary>
             <div class="project-detail">
-              <p><strong data-i18n="question">Question</strong><span data-i18n="pricingQuestion">How could price and competitor relationships change expected demand and revenue?</span></p>
-              <p><strong data-i18n="approach">Approach</strong><span data-i18n="pricingApproach">Combined cross-price relationships, forecasting and competitive evidence in a repeatable analytical workflow.</span></p>
-              <p><strong data-i18n="decision">Decision</strong><span data-i18n="pricingDecision">Clarified the trade-offs behind pricing, portfolio and market-entry scenarios while reducing recurring analytical time.</span></p>
+              <p><strong data-i18n="question">Question</strong><span data-i18n="pricingQuestion">How do formulary placement and pharmacy-network conditions vary across plans, geographies and time?</span></p>
+              <p><strong data-i18n="approach">Approach</strong><span data-i18n="pricingApproach">Structured CMS monthly formulary and pharmacy-network files into comparable plan, drug, restriction and geographic indicators.</span></p>
+              <p><strong data-i18n="decision">Decision</strong><span data-i18n="pricingDecision">Identified access changes, plan heterogeneity and competitive coverage signals without treating formulary presence as observed prescribing.</span></p>
             </div>
           </details>
           <details class="project-card reveal">
             <summary>
               <span class="project-number">03</span>
-              <span class="project-area" data-i18n="patientJourney">Patient journey</span>
-              <h3 data-i18n="immunologyTitle">Immunology treatment pathways</h3>
-              <p data-i18n="immunologySummary">Patient flows and biologic market dynamics across four immune-mediated conditions.</p>
+              <span class="project-area" data-i18n="patientJourney">Patient journey & competitive intelligence</span>
+              <h3 data-i18n="immunologyTitle">Breast cancer treatment pathways and competitive landscape</h3>
+              <p data-i18n="immunologySummary">A decision-based view of treatment sequencing, access in Mexico and pipeline threats across three therapeutic clusters.</p>
               <span class="expand" data-i18n="openCase">Case details</span>
             </summary>
             <div class="project-detail">
-              <p><strong data-i18n="scope">Scope</strong><span data-i18n="immunologyScope">Psoriasis, psoriatic arthritis, rheumatoid arthritis and hidradenitis suppurativa.</span></p>
-              <p><strong data-i18n="approach">Approach</strong><span data-i18n="immunologyApproach">Connected epidemiology, treatment flows, clinical positioning and competitor evidence.</span></p>
-              <p><strong data-i18n="decision">Decision</strong><span data-i18n="immunologyDecision">Translated pathway bottlenecks and market dynamics into addressable-market and share implications.</span></p>
+              <p><strong data-i18n="scope">Scope</strong><span data-i18n="immunologyScope">HR+/HER2−, HER2+ and triple-negative breast cancer across early and advanced disease.</span></p>
+              <p><strong data-i18n="approach">Approach</strong><span data-i18n="immunologyApproach">Connected clinical gates, biomarkers, treatment exposure, Mexican access evidence and a date-stamped competitive pipeline.</span></p>
+              <p><strong data-i18n="decision">Decision</strong><span data-i18n="immunologyDecision">Clarified where each therapy fits, what limits effective access and which assets could reshape current standards of care.</span></p>
+              <a class="case-link" href="breast-cancer-patient-journey.html" data-i18n="viewJourneyCase">Explore the full case study →</a>
             </div>
           </details>
           <details class="project-card reveal">
@@ -180,40 +183,48 @@
           <details class="project-card reveal">
             <summary>
               <span class="project-number">05</span>
-              <span class="project-area" data-i18n="specialtyPortfolio">Specialty portfolio</span>
-              <h3 data-i18n="recoveryTitle">Specialty portfolio recovery</h3>
-              <p data-i18n="recoverySummary">Diagnosing category underperformance during a period of extraordinary disruption.</p>
+              <span class="project-area" data-i18n="forecasting">Forecasting</span>
+              <h3 data-i18n="forecastTitle">Formulary access and network forecasting</h3>
+              <p data-i18n="forecastSummary">Forward-looking scenarios for plan coverage, restrictions and pharmacy-network availability using monthly CMS snapshots.</p>
               <span class="expand" data-i18n="openCase">Case details</span>
             </summary>
             <div class="project-detail">
-              <p><strong data-i18n="question">Question</strong><span data-i18n="recoveryQuestion">Did declining sales reflect lower demand, changed purchasing behavior or product availability?</span></p>
-              <p><strong data-i18n="approach">Approach</strong><span data-i18n="recoveryApproach">Decomposed performance from category to molecule and integrated sales, forecast, loyalty, geography and inventory evidence.</span></p>
-              <p><strong data-i18n="decision">Decision</strong><span data-i18n="recoveryDecision">Focused recommendations on inventory allocation, continuity of supply and commercial priorities.</span></p>
+              <p><strong data-i18n="approach">Approach</strong><span data-i18n="forecastApproach">Built monthly panels by plan, geography and product; separated persistence, entry, exit and restriction changes before projecting future access states.</span></p>
+              <p><strong data-i18n="decision">Decision</strong><span data-i18n="forecastDecision">Produced transparent scenarios for access planning while explicitly separating coverage forecasts from prescription-demand forecasts.</span></p>
+            </div>
+          </details>
+          <details class="project-card reveal">
+            <summary>
+              <span class="project-number">06</span>
+              <span class="project-area" data-i18n="lossExclusivity">Loss of exclusivity</span>
+              <h3 data-i18n="loeTitle">Post-patent formulary transition</h3>
+              <p data-i18n="loeSummary">Tracking how brand, generic and therapeutic alternatives enter formularies after loss of exclusivity.</p>
+              <span class="expand" data-i18n="openCase">Case details</span>
+            </summary>
+            <div class="project-detail">
+              <p><strong data-i18n="approach">Approach</strong><span data-i18n="loeApproach">Followed monthly product presence, tier and utilization-management changes across plans around generic or biosimilar entry.</span></p>
+              <p><strong data-i18n="decision">Decision</strong><span data-i18n="loeDecision">Separated early formulary displacement signals from actual prescription switching and defined the additional claims evidence needed to quantify uptake.</span></p>
+            </div>
+          </details>
+          <details class="project-card reveal">
+            <summary>
+              <span class="project-number">07</span>
+              <span class="project-area" data-i18n="hospitalAnalytics">Hospital analytics</span>
+              <h3 data-i18n="hospitalTitle">Hospital supply-use and expenditure benchmarking</h3>
+              <p data-i18n="hospitalSummary">A hospital-level framework linking discharge volume and case mix with expected supply consumption and expenditure inputs.</p>
+              <span class="expand" data-i18n="openCase">Case details</span>
+            </summary>
+            <div class="project-detail">
+              <p><strong data-i18n="approach">Approach</strong><span data-i18n="hospitalApproach">Used DGIS discharges by hospital and diagnosis to construct activity and case-mix denominators, then linked them to supply-use protocols and purchasing or unit-cost data.</span></p>
+              <p><strong data-i18n="decision">Decision</strong><span data-i18n="hospitalDecision">Benchmarked observed or expected expenditure per discharge and identified hospitals where volume, complexity or purchasing patterns merit review.</span></p>
             </div>
           </details>
         </div>
       </div>
     </section>
 
-    <section class="section portfolio portfolio-alt" id="commercial">
-      <div class="section-label reveal"><span>04</span><p data-i18n="commercialLabel">Commercial portfolio</p></div>
-      <div class="section-content">
-        <div class="section-heading reveal">
-          <h2 data-i18n="commercialTitle">Analytics built around the next business action.</h2>
-          <p data-i18n="commercialIntro">Selected applications in sales performance, demand planning, customer behavior and retail execution.</p>
-        </div>
-        <div class="project-grid compact">
-          <details class="project-card reveal"><summary><span class="project-number">01</span><span class="project-area" data-i18n="forecasting">Forecasting</span><h3 data-i18n="forecastTitle">Sales forecast and stakeholder alignment</h3><p data-i18n="forecastSummary">Transparent assumptions and category-level expectations for annual planning.</p><span class="expand" data-i18n="openCase">Case details</span></summary><div class="project-detail"><p><strong data-i18n="approach">Approach</strong><span data-i18n="forecastApproach">Combined historical demand and category trends, then challenged and reconciled assumptions with commercial stakeholders.</span></p><p><strong data-i18n="decision">Decision</strong><span data-i18n="forecastDecision">Created alignment around expected performance, risks and commercial priorities.</span></p></div></details>
-          <details class="project-card reveal"><summary><span class="project-number">02</span><span class="project-area" data-i18n="businessIntelligence">Business intelligence</span><h3 data-i18n="dashboardTitle">Sales and profitability performance system</h3><p data-i18n="dashboardSummary">Automated KPIs across products, channels, geographies and time.</p><span class="expand" data-i18n="openCase">Case details</span></summary><div class="project-detail"><p><strong data-i18n="approach">Approach</strong><span data-i18n="dashboardApproach">Integrated transactional, inventory, product and customer data into repeatable reporting and dashboards.</span></p><p><strong data-i18n="decision">Decision</strong><span data-i18n="dashboardDecision">Enabled faster review of sales, margin, anomalies and areas requiring action.</span></p></div></details>
-          <details class="project-card reveal"><summary><span class="project-number">03</span><span class="project-area" data-i18n="demandPlanning">Demand planning</span><h3 data-i18n="inventoryTitle">Demand and inventory-risk forecasting</h3><p data-i18n="inventorySummary">Product- and pharmacy-level signals for potential shortages and demand shifts.</p><span class="expand" data-i18n="openCase">Case details</span></summary><div class="project-detail"><p><strong data-i18n="approach">Approach</strong><span data-i18n="inventoryApproach">Applied time-series and machine-learning methods across products, stores, channels and external variables.</span></p><p><strong data-i18n="decision">Decision</strong><span data-i18n="inventoryDecision">Supported inventory planning, availability and geographic prioritization.</span></p></div></details>
-          <details class="project-card reveal"><summary><span class="project-number">04</span><span class="project-area" data-i18n="customerAnalytics">Customer analytics</span><h3 data-i18n="loyaltyTitle">Specialty loyalty and consumption patterns</h3><p data-i18n="loyaltySummary">Refill, persistence, recurrence and repeat-purchase behavior.</p><span class="expand" data-i18n="openCase">Case details</span></summary><div class="project-detail"><p><strong data-i18n="approach">Approach</strong><span data-i18n="loyaltyApproach">Connected loyalty, transactions, therapy characteristics and customer behavior.</span></p><p><strong data-i18n="decision">Decision</strong><span data-i18n="loyaltyDecision">Generated insights for retention, category management and demand planning.</span></p></div></details>
-          <details class="project-card reveal"><summary><span class="project-number">05</span><span class="project-area" data-i18n="networkAnalytics">Network analytics</span><h3 data-i18n="networkTitle">Pharmacy network and geographic access</h3><p data-i18n="networkSummary">A unified view of customers, transactions, locations and travel times.</p><span class="expand" data-i18n="openCase">Case details</span></summary><div class="project-detail"><p><strong data-i18n="approach">Approach</strong><span data-i18n="networkApproach">Integrated customer identifiers, store locations, purchases and geographic measures across 120+ pharmacies.</span></p><p><strong data-i18n="decision">Decision</strong><span data-i18n="networkDecision">Identified geographic demand patterns and access gaps relevant to network decisions.</span></p></div></details>
-        </div>
-      </div>
-    </section>
-
     <section class="section resume" id="resume">
-      <div class="section-label reveal"><span>05</span><p data-i18n="resumeLabel">Résumé</p></div>
+      <div class="section-label reveal"><span>04</span><p data-i18n="resumeLabel">Résumé</p></div>
       <div class="section-content">
         <div class="section-heading reveal">
           <h2 data-i18n="resumeTitle">Experience across consulting, research and pharmacy retail.</h2>
